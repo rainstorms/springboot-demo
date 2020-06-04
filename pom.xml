@@ -53,11 +53,6 @@
             <scope>test</scope>
         </dependency>
 
-        <dependency>
-            <groupId>com.github.bingoohuang</groupId>
-            <artifactId>delayqueue</artifactId>
-            <version>0.0.19</version>
-        </dependency>
         <!--添加redis客户端   springboot2.selectModelSql 之后 默认使用lettuce客户端-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -108,40 +103,11 @@
             <version>5.1.46</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.github.bingoohuang</groupId>
-            <artifactId>eql</artifactId>
-            <version>0.1.13</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.google.guava</groupId>
-                    <artifactId>guava</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
-            <version>1.1.14</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.github.bingoohuang</groupId>
-            <artifactId>diamond-client</artifactId>
-            <version>0.0.21</version>
-        </dependency>
         <!--添加 id 生成器-->
         <dependency>
             <groupId>com.github.bingoohuang</groupId>
             <artifactId>westid</artifactId>
             <version>0.0.2</version>
-        </dependency>
-
-        <!--添加 后端校验框架-->
-        <dependency>
-            <groupId>com.github.bingoohuang</groupId>
-            <artifactId>asmvalidator</artifactId>
-            <version>0.0.16</version>
         </dependency>
 
         <!--添加 时间处理工具包-->
@@ -169,12 +135,6 @@
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
             <version>3.17</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.github.bingoohuang</groupId>
-            <artifactId>java-utils</artifactId>
-            <version>0.0.25</version>
         </dependency>
 
         <dependency>

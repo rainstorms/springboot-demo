@@ -1,8 +1,11 @@
 package rain.aclwithdb;
 
-import com.github.bingoohuang.utils.lang.Collects;
 import lombok.val;
+import org.apache.commons.collections4.CollectionUtils;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class AclContext {
@@ -38,7 +41,8 @@ public class AclContext {
         if (user == null) return false;
 
         val userRoles = user.getUserRoleIds();
-        return Collects.containsAnyOf(userRoles, roleIds);
+
+        return CollectionUtils.containsAny(userRoles, Arrays.asList(roleIds));
     }
 
     public static void setUser(User user) {
