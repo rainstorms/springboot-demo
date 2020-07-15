@@ -4,7 +4,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
-import redis.clients.jedis.JedisCluster;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -13,7 +12,6 @@ import java.util.Properties;
 
 @Slf4j
 public class FcKafkaConsumer extends Thread {
-    private JedisCluster redis;
     private final static String servers = "servers地址";
     private static KafkaConsumer<String, String> consumer;
 

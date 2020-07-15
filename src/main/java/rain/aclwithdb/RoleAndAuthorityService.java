@@ -15,12 +15,14 @@ public class RoleAndAuthorityService {
 
     //    @WestCacheable(manager = "redis", keyer = "simple")
     public List<String> queryAnonymousCanAccessMenu() {
-        return roleAndAuthorityDao.queryAnonymousCanAccessMenus();
+        return null;
+//        return roleAndAuthorityDao.queryAnonymousCanAccessMenus();
     }
 
     //    @WestCacheable(manager = "redis", keyer = "simple")
     public Map<String, List<String>> getUrlRolesMap() {
-        List<RoleRequest> allRoles = roleAndAuthorityDao.queryRequests();
+//        List<RoleRequest> allRoles = roleAndAuthorityDao.queryRequests();
+        List<RoleRequest> allRoles = null;
         Map<String, List<RoleRequest>> collect = allRoles.stream().collect(Collectors.groupingBy(RoleRequest::getUrl));
 
         Map<String, List<String>> map = Maps.newHashMap();

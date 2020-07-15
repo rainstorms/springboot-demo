@@ -1,7 +1,5 @@
 package rain.aclwithdb;
 
-import org.n3r.eql.eqler.annotations.Sql;
-
 import java.util.List;
 
 /**
@@ -80,68 +78,68 @@ import java.util.List;
 //@IEqler
 public interface RoleAndAuthorityDao {
 
-    @Sql("  SELECT DISTINCT " +
-            "      R.URL " +
-            " FROM REQUEST  R  " +
-            "     ,MENU_REQUEST MR  " +
-            "     ,MENU M       " +
-            "WHERE R.ID = MR.ID  " +
-            "  AND M.ID = MR.MENU_ID  " +
-            "  AND M.ANONYMOUS_CAN_ACCESS = '1'")
-    List<String> queryAnonymousCanAccessMenus();
-
-    @Sql("  SELECT DISTINCT" +
-            "      R.URL" +
-            "     ,RM.ROLE_ID " +
-            " FROM REQUEST  R " +
-            "     ,MENU_REQUEST MR " +
-            "     ,MENU M " +
-            "     ,ROLE_MENU RM " +
-            "WHERE R.ID = MR.ID " +
-            "  AND M.ID = RM.MENU_ID " +
-            "  AND M.ANONYMOUS_CAN_ACCESS = '0'" +
-            "  AND RM.MENU_ID = MR.MENU_ID")
-    List<RoleRequest> queryRequests();
-
-    @Sql("  SELECT M.ID" +
-            "     ,M.MENU_NAME" +
-            "     ,M.MENU_ROUTE " +
-            "     ,M.PARENT_MENU_ID " +
-            " FROM MENU M " +
-            "     ,ROLE_MENU RM " +
-            "WHERE M.ID = RM.MENU_ID " +
-            "  AND M.ANONYMOUS_CAN_ACCESS = '0'" +
-            "  AND RM.ROLE_ID = #1#")
-    List<Menu> queryMenusByRoleId(String roleId);
-
-    @Sql("  SELECT M.ID" +
-            "     ,M.MENU_NAME" +
-            "     ,M.MENU_ROUTE " +
-            "     ,M.PARENT_MENU_ID " +
-            " FROM MENU M " +
-            "     ,ROLE_MENU RM " +
-            "WHERE M.ID = RM.MENU_ID " +
-            "  AND M.ANONYMOUS_CAN_ACCESS = '0'" +
-            "  AND RM.ROLE_ID in (/* in _1 */)")
-    List<Menu> queryMenusByRoleIds(List<String> roleIds);
-
-    @Sql("delete from role_menu where ROLE_ID = #1#")
-    int deleteRoleMenus(String roleId);
-
-    @Sql(" insert into role_menu (ID              , MENU_ID             , ROLE_ID          ) " +
-            "              values" +
-            " /* for item=roleMenu index=index collection=_1 separator=, */" +
-            "                    ('#roleMenu.id#' , '#roleMenu.menuId#' , '#roleMenu.roleId#')" +
-            " /* end */")
-    int addRoleMenus(List<RoleMenu> roleMenus);
-
-    @Sql("select `ID`, ROLE_NAME, NOTIFY_LEVEL, CREATE_TIME from `role` " +
-            "/* isNotEmpty _1 */" +
-            " where NOTIFY_LEVEL = #_1# " +
-            "/* end */")
-    List<Role> queryRoles(String notifyLevel);
-
-    @Sql("update role set ROLE_NAME = #2# where id = #1#")
-    int updateRoleName(String id, String name);
+//    @Sql("  SELECT DISTINCT " +
+//            "      R.URL " +
+//            " FROM REQUEST  R  " +
+//            "     ,MENU_REQUEST MR  " +
+//            "     ,MENU M       " +
+//            "WHERE R.ID = MR.ID  " +
+//            "  AND M.ID = MR.MENU_ID  " +
+//            "  AND M.ANONYMOUS_CAN_ACCESS = '1'")
+//    List<String> queryAnonymousCanAccessMenus();
+//
+//    @Sql("  SELECT DISTINCT" +
+//            "      R.URL" +
+//            "     ,RM.ROLE_ID " +
+//            " FROM REQUEST  R " +
+//            "     ,MENU_REQUEST MR " +
+//            "     ,MENU M " +
+//            "     ,ROLE_MENU RM " +
+//            "WHERE R.ID = MR.ID " +
+//            "  AND M.ID = RM.MENU_ID " +
+//            "  AND M.ANONYMOUS_CAN_ACCESS = '0'" +
+//            "  AND RM.MENU_ID = MR.MENU_ID")
+//    List<RoleRequest> queryRequests();
+//
+//    @Sql("  SELECT M.ID" +
+//            "     ,M.MENU_NAME" +
+//            "     ,M.MENU_ROUTE " +
+//            "     ,M.PARENT_MENU_ID " +
+//            " FROM MENU M " +
+//            "     ,ROLE_MENU RM " +
+//            "WHERE M.ID = RM.MENU_ID " +
+//            "  AND M.ANONYMOUS_CAN_ACCESS = '0'" +
+//            "  AND RM.ROLE_ID = #1#")
+//    List<Menu> queryMenusByRoleId(String roleId);
+//
+//    @Sql("  SELECT M.ID" +
+//            "     ,M.MENU_NAME" +
+//            "     ,M.MENU_ROUTE " +
+//            "     ,M.PARENT_MENU_ID " +
+//            " FROM MENU M " +
+//            "     ,ROLE_MENU RM " +
+//            "WHERE M.ID = RM.MENU_ID " +
+//            "  AND M.ANONYMOUS_CAN_ACCESS = '0'" +
+//            "  AND RM.ROLE_ID in (/* in _1 */)")
+//    List<Menu> queryMenusByRoleIds(List<String> roleIds);
+//
+//    @Sql("delete from role_menu where ROLE_ID = #1#")
+//    int deleteRoleMenus(String roleId);
+//
+//    @Sql(" insert into role_menu (ID              , MENU_ID             , ROLE_ID          ) " +
+//            "              values" +
+//            " /* for item=roleMenu index=index collection=_1 separator=, */" +
+//            "                    ('#roleMenu.id#' , '#roleMenu.menuId#' , '#roleMenu.roleId#')" +
+//            " /* end */")
+//    int addRoleMenus(List<RoleMenu> roleMenus);
+//
+//    @Sql("select `ID`, ROLE_NAME, NOTIFY_LEVEL, CREATE_TIME from `role` " +
+//            "/* isNotEmpty _1 */" +
+//            " where NOTIFY_LEVEL = #_1# " +
+//            "/* end */")
+//    List<Role> queryRoles(String notifyLevel);
+//
+//    @Sql("update role set ROLE_NAME = #2# where id = #1#")
+//    int updateRoleName(String id, String name);
 }
 

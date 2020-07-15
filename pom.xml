@@ -53,7 +53,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!--添加redis客户端   springboot2.selectModelSql 之后 默认使用lettuce客户端-->
+        <!--添加redis客户端   springboot2.x 之后 默认使用lettuce客户端-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
@@ -124,29 +124,12 @@
             <version>1.2.53</version>
         </dependency>
 
-        <!--添加 Microsoft Office格式档案读和写的功能-->
+        <!--添加 性能测试-->
         <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi</artifactId>
-            <version>3.17</version>
-        </dependency>
-        <!--添加 Microsoft Office格式档案读和写的功能-->
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi-ooxml</artifactId>
-            <version>3.17</version>
-        </dependency>
-
-        <dependency>
-            <groupId>redis.clients</groupId>
-            <artifactId>jedis</artifactId>
-            <version>2.9.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.github.bingoohuang</groupId>
-            <artifactId>westcache</artifactId>
-            <version>0.0.35</version>
+            <groupId>org.databene</groupId>
+            <artifactId>contiperf</artifactId>
+            <version>2.3.4</version>
+            <scope>test</scope>
         </dependency>
 
         <dependency>
