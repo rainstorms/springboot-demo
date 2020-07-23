@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 public class FcKafkaConsumerInit implements ApplicationListener<ContextRefreshedEvent> {
 
     @Override public void onApplicationEvent(ContextRefreshedEvent contextRefreshedEvent) {
-        new FcKafkaConsumer(Lists.newArrayList("topic1", "topic2")).start();
+//        new FcKafkaConsumer(Lists.newArrayList("topic1", "topic2")).start();
     }
 
 }

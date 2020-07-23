@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 @Service
 public class RoleAndAuthorityService {
 
-    @Autowired RoleAndAuthorityDao roleAndAuthorityDao;
+//    @Autowired RoleAndAuthorityDao roleAndAuthorityDao;
 
     //    @WestCacheable(manager = "redis", keyer = "simple")
     public List<String> queryAnonymousCanAccessMenu() {

@@ -13,8 +13,8 @@ public class AclConfigurer implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(aclInterceptor)
-                .addPathPatterns("/**")
-                .excludePathPatterns("/api/**");
+//        registry.addInterceptor(aclInterceptor)
+//                .addPathPatterns("/**")
+//                .excludePathPatterns("/api/**");
     }
 }
