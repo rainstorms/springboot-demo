@@ -13,7 +13,7 @@ public class BigDecimalUtil {
      * @param x 被加数（可为null）
      * @param y 加数 （可为null）
      * @return 和 （可为null）
-     * @author 大脑补丁 on 2020-03-30 14:52
+     * @author rain on 2020-03-30 14:52
      */
     public static BigDecimal add(BigDecimal x, BigDecimal y) {
         if (x == null) {
@@ -33,7 +33,7 @@ public class BigDecimalUtil {
      * @param c 加数（可为null）
      * @param d 加数（可为null）
      * @return BigDecimal （可为null）
-     * @author 大脑补丁 on 2020-03-30 22:17
+     * @author rain on 2020-03-30 22:17
      */
     public static BigDecimal add(BigDecimal a, BigDecimal b, BigDecimal c, BigDecimal d) {
         BigDecimal ab = add(a, b);
@@ -47,7 +47,7 @@ public class BigDecimalUtil {
      * @param x      被加数（可为null）
      * @param result 和 （可为null,若被加数不为为null，result默认值为0）
      * @return result 和 （可为null）
-     * @author 大脑补丁 on 2020-03-30 14:16
+     * @author rain on 2020-03-30 14:16
      */
     public static BigDecimal accumulate(BigDecimal x, BigDecimal result) {
         if (x == null) {
@@ -65,7 +65,7 @@ public class BigDecimalUtil {
      * @param x 被减数（可为null）
      * @param y 减数（可为null）
      * @return BigDecimal 差 （可为null）
-     * @author 大脑补丁 on 2020-03-30 14:47
+     * @author rain on 2020-03-30 14:47
      */
     public static BigDecimal subtract(BigDecimal x, BigDecimal y) {
         if (x == null || y == null) {
@@ -80,7 +80,7 @@ public class BigDecimalUtil {
      * @param x 乘数(可为null)
      * @param y 乘数(可为null)
      * @return BigDecimal 积
-     * @author 大脑补丁 on 2020-03-30 14:14
+     * @author rain on 2020-03-30 14:14
      */
     public static BigDecimal multiply(BigDecimal x, BigDecimal y) {
         if (x == null || y == null) {
@@ -95,7 +95,7 @@ public class BigDecimalUtil {
      * @param x 被除数（可为null）
      * @param y 除数（可为null）
      * @return 商 （可为null,四舍五入，默认保留20位小数）
-     * @author 大脑补丁 on 2020-03-30 14:15
+     * @author rain on 2020-03-30 14:15
      */
     public static BigDecimal divide(BigDecimal x, BigDecimal y) {
         if (x == null || y == null || y.compareTo(BigDecimal.ZERO) == 0) {
@@ -110,7 +110,7 @@ public class BigDecimalUtil {
      *
      * @param x 要转字符串的小数
      * @return String
-     * @author 大脑补丁 on 2020-03-30 15:08
+     * @author rain on 2020-03-30 15:08
      */
     public static String toPlainString(BigDecimal x) {
         if (x == null) {
@@ -125,7 +125,7 @@ public class BigDecimalUtil {
      * @param x     目标小数
      * @param scale 要保留小数位数
      * @return BigDecimal 结果四舍五入
-     * @author 大脑补丁 on 2020-03-30 15:17
+     * @author rain on 2020-03-30 15:17
      */
     public static BigDecimal scale(BigDecimal x, int scale) {
         if (x == null) {
@@ -139,7 +139,7 @@ public class BigDecimalUtil {
      *
      * @param x(可为null)
      * @return BigDecimal (可为null)
-     * @author 大脑补丁 on 2020-03-30 22:24
+     * @author rain on 2020-03-30 22:24
      */
     public static BigDecimal toBigDecimal(Integer x) {
         if (x == null) {
@@ -153,7 +153,7 @@ public class BigDecimalUtil {
      *
      * @param x(可为null)
      * @return BigDecimal (可为null)
-     * @author 大脑补丁 on 2020-03-30 22:24
+     * @author rain on 2020-03-30 22:24
      */
     public static BigDecimal toBigDecimal(Long x) {
         if (x == null) {
@@ -167,7 +167,7 @@ public class BigDecimalUtil {
      *
      * @param x(可为null)
      * @return BigDecimal (可为null)
-     * @author 大脑补丁 on 2020-03-30 22:24
+     * @author rain on 2020-03-30 22:24
      */
     public static BigDecimal toBigDecimal(Double x) {
         if (x == null) {
@@ -181,7 +181,7 @@ public class BigDecimalUtil {
      *
      * @param x(可为null)
      * @return BigDecimal (可为null)
-     * @author 大脑补丁 on 2020-03-30 22:24
+     * @author rain on 2020-03-30 22:24
      */
     public static BigDecimal toBigDecimal(Float x) {
         if (x == null) {
@@ -195,7 +195,7 @@ public class BigDecimalUtil {
      *
      * @param x(可为null)
      * @return BigDecimal (可为null)
-     * @author 大脑补丁 on 2020-03-30 22:24
+     * @author rain on 2020-03-30 22:24
      */
     public static BigDecimal toBigDecimal(String x) {
         if (x == null) {
@@ -209,7 +209,7 @@ public class BigDecimalUtil {
      *
      * @param x(可为null)
      * @return BigDecimal (可为null)
-     * @author 大脑补丁 on 2020-03-30 22:24
+     * @author rain on 2020-03-30 22:24
      */
     public static BigDecimal toBigDecimal(Object x) {
         if (x == null) {
@@ -230,7 +230,7 @@ public class BigDecimalUtil {
      * @param x        目标数(可为null)
      * @param multiple 倍数 (可为null)
      * @return BigDecimal (可为null)
-     * @author 大脑补丁 on 2020-03-30 22:43
+     * @author rain on 2020-03-30 22:43
      */
     public static BigDecimal multiple(BigDecimal x, Integer multiple) {
         if (x == null || multiple == null) {
